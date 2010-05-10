@@ -15,7 +15,7 @@ window.location.replace('http://' + window.location.hostname + '/' + window.loca
 }
 </script>
 -->
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?0510" type="text/css" media="screen" />
 
 <?php wp_head(); ?>
 <noscript>
