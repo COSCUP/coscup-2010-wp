@@ -9,6 +9,17 @@ wp_register_script(
 */
 wp_enqueue_script('jquery');
 
+//Redirect page with 'link_redirection' meta_key value
+add_filter('page_link', 'redirect_page_link', 10, 2);
+
+function redirect_page_link($link, $id) {
+	if ($url = get_post_meta($id, 'link_redirection', true)) {
+			return $url;
+	} else {
+			return $link;
+	}
+}
+
 /* Warning: DO NOT CHANGE THE ORDER OF THESE FUNCTION */
 
 register_sidebar(array(
